@@ -105,7 +105,7 @@
 
 ch.consume(queue, callback, opts)
 
-* 設定{noAck: false}必須任務完成後呼叫ch.ack(msg)確認完成
+* 若設定{noAck: false}，必須於任務完成後呼叫ch.ack(msg)
 
 ### 訊息持久設定(當rabbitmq server異常時，訊息不掉失)
 
@@ -126,7 +126,7 @@ ch.sendToQueue(queue, buffer, opts)
 * ch.assertExchange(exchange, 'fanout', opts);
 
 ---
-### 訊息模糊比對範例 (參數為topic)
+### 訊息模糊比對範例，參數為topic
 
 * sender發送RoutingKey: 'kern.critical'
 
