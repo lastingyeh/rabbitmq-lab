@@ -24,7 +24,7 @@
 
     $ brew link rabbitmq
 
-啟動rabbitmq-server，開啟瀏覽器localhost:15672(設定檔位置: /usr/local/sbin/rabbitmq-server)
+啟動rabbitmq-server，開啟瀏覽器localhost:15672(檔案路徑:/usr/local/sbin/rabbitmq-server)
 
     $ rabbitmq-server
 
@@ -83,7 +83,7 @@
         '請求Queue'&&'回應Queue'的correlation_Id必須相同(不然訊息會被丟棄)
 
 ---
-## 實用命令列
+## 常用CLI提示命令
 
 ### 列出所有Queue資料筆數
 
@@ -107,7 +107,7 @@ ch.consume(queue, callback, opts)
 
 * 設定 {noAck: false} => 必須在任務完成後呼叫 ch.ack(msg) 確認完成
 
-### 訊息保存(預防rabbitmq異常時，資料仍完整保存)
+### 訊息持久設定(預防rabbitmq異常時，資料仍完整保存)
 
 ch.assertQueue(queue, opts)
 
@@ -126,13 +126,13 @@ ch.sendToQueue(queue, buffer, opts)
 * ch.assertExchange(exchange, 'fanout', opts);
 
 ---
-### 訊息模糊比對範例(參數為topic)
+### 訊息模糊比對範例 ( 參數為topic )
 
 * sender發送RoutingKey: 'kern.critical'
 
 * receiver收到訊息解析(可自行設定多個篩選RoutingKey)
 
-        (v) # (同廣播)      
+        (v) # => 同廣播   
 
         (v) *.critical
 
