@@ -105,7 +105,7 @@
 
 ch.consume(queue, callback, opts)
 
-* 若設定{noAck: false}，必須於任務完成後呼叫ch.ack(msg)
+* 若設定{noAck: false}，必須於任務完成後呼叫ch.ack(msg)
 
 ### 訊息持久設定(當rabbitmq server異常時，訊息不掉失)
 
