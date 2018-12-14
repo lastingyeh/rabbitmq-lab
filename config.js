@@ -1,0 +1,1 @@
+exports.rabbitmqHost = 'amqp://localhost'
