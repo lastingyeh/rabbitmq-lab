@@ -105,7 +105,7 @@
 
 ch.consume(queue, callback, opts)
 
-* 設定 {noAck: false} => 必須在任務完成後呼叫 ch.ack(msg) 確認完成
+* 設定{noAck: false}必須任務完成後呼叫ch.ack(msg)確認完成
 
 ### 訊息持久設定(預防rabbitmq異常時，資料仍完整保存)
 
@@ -130,7 +130,7 @@ ch.sendToQueue(queue, buffer, opts)
 
 * sender發送RoutingKey: 'kern.critical'
 
-* receiver收到訊息解析(可自行設定多個篩選RoutingKey)
+* receiver收到訊息解析(可自行設定多個RoutingKey)
 
         (v) # => 同廣播   
 
