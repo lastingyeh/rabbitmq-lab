@@ -1,6 +1,8 @@
 # RabbitMQ 筆記本
 
-## 安裝
+## 安裝說明
+
+### MAC
 
     $ brew update
 
@@ -28,7 +30,15 @@
 
     $ rabbitmq-server
 
-錯誤排除方式：
+---
+
+### Windows
+
+[安裝說明](https://www.youtube.com/watch?v=3sEPqKrFQf8)
+
+---
+
+### 錯誤排除：
 
 1. [Operation Not Permitted](https://www.barretlee.com/blog/2016/04/06/operation-not-permitted-problem-in-linux-or-unix-system/) 
 
