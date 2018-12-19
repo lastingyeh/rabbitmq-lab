@@ -140,7 +140,7 @@ ch.sendToQueue(queue, buffer, opts)
 
 * sender發送RoutingKey: 'kern.critical'
 
-* receiver收到訊息解析(可自行設定多個 RoutingKey)
+* receiver收到訊息解析(可自行設定多個RoutingKey)
 
         (v) # => 同廣播   
 
